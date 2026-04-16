@@ -1,0 +1,21 @@
+{
+  "name": "math-practice-game",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daily 15-minute math practice for fractions, decimals, and percentages.",
+  "main": "server/index.js",
+  "scripts": {
+    "install-all": "npm install && npm --prefix client install",
+    "build": "npm --prefix client install && npm --prefix client run build",
+    "start": "node server/index.js",
+    "dev:server": "node server/index.js",
+    "dev:client": "npm --prefix client run dev"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "compression": "^1.7.4"
+  }
+}
