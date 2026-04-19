@@ -1,4 +1,5 @@
 import { Fraction, gcd, parseUserFraction, parseUserNumber } from './fraction.js';
+import { WORD_TOPICS } from './wordProblems.js';
 
 const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -539,6 +540,7 @@ export const TOPICS = {
   'convert.pct_to_frac': { label: '% → Fraction', gen: genPctToFrac, group: 'Convert' },
   'convert.dec_to_pct': { label: 'Decimal → %', gen: genDecToPct, group: 'Convert' },
   'convert.pct_to_dec': { label: '% → Decimal', gen: genPctToDec, group: 'Convert' },
+  ...WORD_TOPICS,
 };
 
 export const TOPIC_IDS = Object.keys(TOPICS);

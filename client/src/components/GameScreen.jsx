@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import QuestionDisplay from './QuestionDisplay.jsx';
+import StoryDisplay from './StoryDisplay.jsx';
 import { generateQuestion, TOPICS } from '../math/generators.js';
 
 const REVEAL_MS = 1100;
@@ -135,7 +136,11 @@ export default function GameScreen({ config, onFinish }) {
 
       <div className="topic-tag">{TOPICS[question.topicId].label}</div>
 
-      <QuestionDisplay parts={question.parts} />
+      {question.story ? (
+        <StoryDisplay story={question.story} />
+      ) : (
+        <QuestionDisplay parts={question.parts} />
+      )}
 
       <form className="answer-form" onSubmit={handleSubmit}>
         <input

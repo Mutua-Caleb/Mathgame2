@@ -22,6 +22,13 @@ another.
 
 **Conversions** — fraction ↔ decimal, fraction ↔ percent, decimal ↔ percent.
 
+**Word problems** — reverse (find the original amount from a unit or non-unit
+fraction), reverse division and chain-of-operations puzzles, sharing, fraction
+of a quantity (including unit conversion like kg→g), "remaining amount"
+problems, percent of a group, percent comparisons, and percent of a number in
+real-life contexts. All generated with clean integer answers so they stay
+mental-math friendly.
+
 Pick Easy / Medium / Hard; pick any subset of topics or use one of the
 presets (All, Fractions-only, Conversions-only). Streak counter persists in
 localStorage so tomorrow's session picks up where today's left off.
