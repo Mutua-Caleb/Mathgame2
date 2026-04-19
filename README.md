@@ -1,48 +1,52 @@
 # Math Sprint
 
-A daily 15-minute math practice game for an 11-year-old covering fractions,
-decimals, percentages, and all their conversions. Every question is generated
-dynamically so nothing can be memorized. Typing-fluent feel: answer, press
-Enter, next question.
+A daily 15-minute **word-problem** practice game for an 11-year-old. All
+questions are short word problems modeled on the textbook exercises
+covering fractions, decimals, and percentages. Every question is
+generated dynamically so nothing can be memorized. Typing-fluent feel:
+answer, press Enter, next question.
 
 Built with React + Vite on the client and a tiny Node/Express server. One
 service, deployable to Render in about two minutes.
 
-## Topics covered
+## What's in the question pool
 
-**Fractions** — add, subtract, multiply, divide, simplify, equivalent
-fractions, compare, and "of a quantity" problems. Mixed numbers mixed in at
-higher difficulty.
+Seventeen generators grouped into five sections:
 
-**Decimals** — add, subtract, multiply, divide, scale by 10/100/1000, round to
-tenths/hundredths/thousandths, compare.
+**Finding the whole** — unit-fraction and non-unit-fraction "reverse"
+problems, decimal-answer versions (e.g. `5/8 of a length is 2 m → 3.2 m`),
+and ones requiring unit conversion (`1/8 of a carton is 200 ml → 1.6 L`).
 
-**Percents** — percent of a number, expressing one quantity as a percent of
-another.
+**Fractions** — fraction of an amount (including `kg→g`, `km→m`, `L→ml`),
+remaining-amount problems (chocolate eaten, classmates absent, bean plants
+that died), and split-with-remainder problems (`2 kg flour: 3/8 cake,
+3/5 crust, rest decorating`).
 
-**Conversions** — fraction ↔ decimal, fraction ↔ percent, decimal ↔ percent.
+**Reverse operations** — "when a number is divided by 12 the answer is 3" and
+two-step chains like "divided by 6 then multiplied by 5".
 
-**Word problems** — reverse (find the original amount from a unit or non-unit
-fraction), reverse division and chain-of-operations puzzles, sharing, fraction
-of a quantity (including unit conversion like kg→g), "remaining amount"
-problems, percent of a group, percent comparisons, and percent of a number in
-real-life contexts. All generated with clean integer answers so they stay
-mental-math friendly.
+**Sharing** — find the total or find each share; journey problems
+("travelled 105 km, half way — full length?").
 
-Pick Easy / Medium / Hard; pick any subset of topics or use one of the
-presets (All, Fractions-only, Conversions-only). Streak counter persists in
-localStorage so tomorrow's session picks up where today's left off.
+**Percentages** — express as a percentage, percent of a number in context
+(discounts, tanks, classes), which class has the higher percentage, by how
+many percentage points, and "best subject" given a list of test scores.
+
+All answers are clean integers or one-decimal numbers so mental math works.
+Currency prefixes and unit suffixes on the input are accepted
+(`£45`, `45`, `300 ml`, `1.6 L`, `25%`).
+
+Pick Easy / Medium / Hard; pick any subset of topics. Streak counter
+persists in localStorage so tomorrow's session picks up where today's left
+off.
 
 ## Input formats
 
-- Fraction: `3/4` or `1 1/2` (mixed numbers use a space)
-- Decimal: `0.75`
-- Percent: `50` or `50%`
-- Compare: `<`, `>`, or `=`
-
-Equivalent fractions are accepted for arithmetic answers (`6/8` counts as
-`3/4`), but simplify / decimal-to-fraction questions require fully reduced
-form on purpose — that's the skill being drilled.
+- Whole number: `45`
+- Decimal: `3.2`
+- Percent: `25` or `25%`
+- Choice questions: `A` / `B` or the subject name
+- Optional currency/unit: `£45`, `300 ml`, `1.6 L`, `8 km` are all fine
 
 ## Run locally
 

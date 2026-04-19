@@ -34,8 +34,7 @@ export default function StartScreen({ onStart, stats }) {
   };
 
   const presetAll = () => setSelected(new Set(TOPIC_IDS));
-  const presetFractions = () => setSelected(new Set(TOPIC_GROUPS['Fractions']));
-  const presetConvert = () => setSelected(new Set(TOPIC_GROUPS['Convert']));
+  const presetNone = () => setSelected(new Set());
 
   const canStart = selected.size > 0;
 
@@ -43,7 +42,7 @@ export default function StartScreen({ onStart, stats }) {
     <div className="screen start">
       <header className="hero">
         <div className="logo">Math Sprint</div>
-        <div className="tagline">Daily practice: fractions, decimals, percents.</div>
+        <div className="tagline">Daily word-problem practice: fractions, decimals, percents.</div>
       </header>
 
       {stats && stats.streak > 0 && (
@@ -88,8 +87,7 @@ export default function StartScreen({ onStart, stats }) {
           <h2>3. Topics</h2>
           <div className="preset-row">
             <button className="link-btn" onClick={presetAll}>All</button>
-            <button className="link-btn" onClick={presetFractions}>Fractions only</button>
-            <button className="link-btn" onClick={presetConvert}>Conversions only</button>
+            <button className="link-btn" onClick={presetNone}>None</button>
           </div>
         </div>
 
